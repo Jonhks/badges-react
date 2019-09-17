@@ -1,9 +1,11 @@
 import React from 'react';
 
 import './styles/BadgeNew.css';
+// import Navbar from '../components/Navbar'
 import header from '../images/badge-header.svg';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
+import miFoto from '../images/yo2.jpeg'
 
 class BadgeNew extends React.Component {
   state = {
@@ -17,7 +19,10 @@ class BadgeNew extends React.Component {
   };
 
   handleChange = e => {
+    // const nextForm = this.state.form
+    // nextForm[e.target.name] = e.target.value
     this.setState({
+      // form:  nextForm
       form: {
         ...this.state.form,
         [e.target.name]: e.target.value,
@@ -41,7 +46,7 @@ class BadgeNew extends React.Component {
                 twitter={this.state.form.twitter}
                 jobTitle={this.state.form.jobTitle}
                 email={this.state.form.email}
-                avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
+                avatarUrl={miFoto}
               />
             </div>
 
